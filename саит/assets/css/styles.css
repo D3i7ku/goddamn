@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(36, 36, 36);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #background-video-fireworks {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(50%) contrast(80%);
+    z-index: -1;
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    color: rgb(212, 212, 212);
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .buttons-container button {
+    margin: 0 10px;
+  }
+  
+  
+  .congrats {
+    color: rgb(212, 212, 212);
+  }
+  
+  button {
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px 30px;
+    margin: 0 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .no-button {
+    cursor: not-allowed;
+    pointer-events: auto;
+  }
+  
+  .yes-button:hover {
+    background-color: #9b59b6;
+  }
+  
+  @keyframes spin-and-explode {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    100% {
+      transform: rotate(360deg) scale(3);
+      opacity: 0;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
