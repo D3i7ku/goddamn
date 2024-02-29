@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const containerRect = container.getBoundingClientRect();
       let newLeft, newTop;
       do {
-        newLeft = random(40, containerRect.width - noButton.clientWidth - 350);
-        newTop = random(40, containerRect.height - noButton.clientHeight - 350);
-      } while (distanceBetweenPoints({x: newLeft, y: newTop}, getMousePosition()) < 20);
+        newLeft = random(40, containerRect.width - noButton.clientWidth - 100);
+        newTop = random(40, containerRect.height - noButton.clientHeight - 400);
+      } while (distanceBetweenPoints({x: newLeft, y: newTop}, getMousePosition()) < 40);
   
       noButton.style.left = `${newLeft}px`;
       noButton.style.top = `${newTop}px`;
