@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenElements = Array.from(document.querySelectorAll('.container h1, .buttons-container'));
     hiddenElements.forEach(el => el.style.display = 'none');
 
+    // Удаляем кнопки
+    yesButton.style.display = 'none';
+    noButton.style.display = 'none';
+
     // Показываем текст "Эм..."
     const hesitationText = document.createElement('p');
     hesitationText.textContent = 'Эм...';
@@ -35,11 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Удаляем текст "Ну давай по другому)"
         newText.remove();
 
-        // Возвращаем все элементы обратно
-        hiddenElements.forEach(el => el.style.display = 'flex');
+        // Возвращаем все элементы обратно, кроме кнопки "Нет"
+        hiddenElements.forEach(el => {
+          if (el !== noButton) {
+            el.style.display = 'flex';
+          }
+        });
 
-        // Скрываем кнопку "Нет"
-        noButton.style.display = 'none';
+        // Возвращаем кнопку "Да"
+        yesButton.style.display = 'flex';
       }, 3000);
     }, 3000);
   });
