@@ -50,8 +50,8 @@ body {
 }
 
 .copy-button {
-  background-color: #3cb371;
-  border: none;
+  background-color: transparent;
+  border: 2px solid white;
   border-radius: 10px;
   color: white;
   cursor: pointer;
@@ -59,12 +59,16 @@ body {
   padding: 10px 20px;
   margin: 20px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
 }
+
 
 .copy-button:hover {
   transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ddd;
 }
+
 
 .copy-button:focus {
   outline: none;
